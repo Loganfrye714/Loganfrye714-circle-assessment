@@ -1,12 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
-function questonTwo() {
+function QuestonTwo() {
+  const [cookies, setCookie, removeCookie] = useCookies(["counter"]);
+
+  function handleSetCookie() {
+    setCookie("counter", 0, { path: "/" });
+  }
+
+  function handleRemoveCookie() {
+    removeCookie("counter");
+  }
+
+  console.log(cookies);
+
+  function handleRemoveCookie() {
+    removeCookie("counter");
+  }
+
   return (
     <div className="App-header">
       <NavLink to="/">
         <button className="homepage__button">Home</button>
       </NavLink>
+
       <h4>
         Create a function that sets a cookie with an initial value of 0 on the
         page. Each time on the page loads, add 1 to the cookie’s value and log
@@ -14,9 +32,11 @@ function questonTwo() {
         the first page load, 2 on the second load, etc. Extra Credit: On the
         page, create a button that resets the cookie’s value to 0 when clicked.
       </h4>
-      <h4>Answer - </h4>
+      <h4>Answer -</h4>
+      <button onClick={handleSetCookie}>Set Cookie</button>
+      <button onClick={handleRemoveCookie}>Remove Cookie</button>
     </div>
   );
 }
 
-export default questonTwo;
+export default QuestonTwo;
