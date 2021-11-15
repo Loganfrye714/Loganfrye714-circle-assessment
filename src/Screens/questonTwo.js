@@ -1,22 +1,23 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 import { useCookies } from "react-cookie";
 
 function QuestonTwo() {
   const [cookies, setCookie, removeCookie] = useCookies(["counter"]);
 
-  function handleSetCookie() {
-    setCookie("counter", 0, { path: "/" });
-  }
+  useEffect(() => {
+    function handleCookie() {
+      let cookieNum = Number(cookies.counter) + 1;
+      setCookie("counter", cookieNum, { path: "/" });
+    }
+    handleCookie();
+  }, []);
 
+  console.log(cookies.counter);
   function handleRemoveCookie() {
-    removeCookie("counter");
-  }
-
-  console.log(cookies);
-
-  function handleRemoveCookie() {
-    removeCookie("counter");
+    let num = 0;
+    setCookie("counter", num, { path: "/" });
   }
 
   return (
@@ -33,7 +34,6 @@ function QuestonTwo() {
         page, create a button that resets the cookie’s value to 0 when clicked.
       </h4>
       <h4>Answer -</h4>
-      <button onClick={handleSetCookie}>Set Cookie</button>
       <button onClick={handleRemoveCookie}>Remove Cookie</button>
     </div>
   );
