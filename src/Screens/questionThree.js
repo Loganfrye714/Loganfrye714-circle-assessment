@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import functiondiagram from "./functiondiagram.png";
 
 function questionThree() {
   return (
@@ -8,8 +9,12 @@ function questionThree() {
         <NavLink to="/">
           <button className="homepage__button">Home</button>
         </NavLink>
-        <h4></h4>
-        <h4></h4>
+        <h4>
+          Using Lucidchart or a similar diagramming tool, please draw out the
+          logical flow of the function in Question 2.
+        </h4>
+
+        <img src={functiondiagram} className="sandbox__image" alt="sandbox" />
       </div>
     </div>
   );

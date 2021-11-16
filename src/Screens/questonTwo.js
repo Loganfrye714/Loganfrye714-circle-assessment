@@ -16,7 +16,7 @@ function QuestonTwo() {
 
   console.log(cookies.counter);
 
-  function handleRemoveCookie() {
+  function resetCookie() {
     let num = 0;
     setCookie("counter", num, { path: "/" });
   }
@@ -36,7 +36,7 @@ function QuestonTwo() {
         clicked.
       </h4>
       <h4>Answer - Please view the console or here ({cookies.counter})</h4>
-      <button onClick={handleRemoveCookie}>Bonus - Reset Cookie</button>
+      <button onClick={resetCookie}>Bonus - Reset Cookie</button>
     </div>
   );
 }
