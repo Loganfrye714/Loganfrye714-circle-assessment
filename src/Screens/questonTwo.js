@@ -10,7 +10,6 @@ function QuestonTwo() {
     function handleCookie() {
       let cookieNum = Number(cookies.counter) + 1;
       setCookie("counter", cookieNum, { path: "/" });
-      console.log(cookies.counter);
     }
     handleCookie();
   }, []);
