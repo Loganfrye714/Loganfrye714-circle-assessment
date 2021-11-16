@@ -2,10 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function questionOne() {
-  function printHelloWorld() {
+  setTimeout(() => {
     console.log("Hello World");
-  }
-  setInterval(printHelloWorld, 10000);
+  }, 10000);
 
   return (
     <div className="App-header">

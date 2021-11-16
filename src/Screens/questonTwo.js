@@ -10,11 +10,11 @@ function QuestonTwo() {
     function handleCookie() {
       let cookieNum = Number(cookies.counter) + 1;
       setCookie("counter", cookieNum, { path: "/" });
+      console.log(cookies.counter);
     }
     handleCookie();
   }, []);
 
-  console.log(cookies.counter);
   function handleRemoveCookie() {
     let num = 0;
     setCookie("counter", num, { path: "/" });
@@ -27,14 +27,15 @@ function QuestonTwo() {
       </NavLink>
 
       <h4>
-        Create a function that sets a cookie with an initial value of 0 on the
-        page. Each time on the page loads, add 1 to the cookie’s value and log
-        it to the console. For example, the value of the cookie would be 1 on
-        the first page load, 2 on the second load, etc. Extra Credit: On the
-        page, create a button that resets the cookie’s value to 0 when clicked.
+        Question - Create a function that sets a cookie with an initial value of
+        0 on the page. Each time on the page loads, add 1 to the cookie’s value
+        and log it to the console. For example, the value of the cookie would be
+        1 on the first page load, 2 on the second load, etc. Extra Credit: On
+        the page, create a button that resets the cookie’s value to 0 when
+        clicked.
       </h4>
-      <h4>Answer -</h4>
-      <button onClick={handleRemoveCookie}>Remove Cookie</button>
+      <h4>Answer - Please view the console or here ({cookies.counter})</h4>
+      <button onClick={handleRemoveCookie}>Bonus - Reset Cookie</button>
     </div>
   );
 }
