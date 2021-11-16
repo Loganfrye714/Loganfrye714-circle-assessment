@@ -11,7 +11,6 @@ function questionOne() {
       <NavLink to="/">
         <button className="homepage__button">Home</button>
       </NavLink>
-
       <h2>
         Question - Create a function that logs “Hello World” to the console
         every 10 seconds.

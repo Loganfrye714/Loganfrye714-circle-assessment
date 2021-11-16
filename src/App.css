@@ -27,3 +27,8 @@
   display: inline-block;
   font-size: 16px;
 }
+
+.sandbox__image {
+  height: 400px;
+  width: 800px;
+}

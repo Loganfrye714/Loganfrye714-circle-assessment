@@ -4,7 +4,7 @@ import Homescreen from "./Screens/homescreen";
 import QuestionOne from "./Screens/questionOne";
 import QuestonTwo from "./Screens/questonTwo";
 import QuestionThree from "./Screens/questionThree";
-import QuestionFour from "./Screens/questionThree";
+import QuestionFour from "./Screens/questionFour";
 
 function App() {
   return (
