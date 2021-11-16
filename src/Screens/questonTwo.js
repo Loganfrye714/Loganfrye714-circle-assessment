@@ -14,6 +14,8 @@ function QuestonTwo() {
     handleCookie();
   }, []);
 
+  console.log(cookies.counter);
+
   function handleRemoveCookie() {
     let num = 0;
     setCookie("counter", num, { path: "/" });
