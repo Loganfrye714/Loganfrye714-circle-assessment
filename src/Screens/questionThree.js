@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import functiondiagram from "./functiondiagram.png";
+import functiondiagram from "./func.png";
 
 function questionThree() {
   return (
